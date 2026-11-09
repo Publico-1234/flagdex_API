@@ -1,0 +1,231 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #2c5035;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #34db4d;
+}
+
+button {
+    background-color: #34db3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #274d0e;
+}
+
+.pais-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.bandera {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.pais-card h2 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.pais-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.pais-card li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: #fdecea;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.loading {
+    color: #39db34;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 22px 18px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .pais-card {
+        padding: 16px;
+    }
+
+    .bandera {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 18px 14px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    .pais-card {
+        padding: 14px;
+    }
+
+    .bandera {
+        width: 90px;
+    }
+
+    .pais-card h2 {
+        font-size: 1.15rem;
+    }
+
+    .pais-card ul {
+        display: block;
+        width: 100%;
+    }
+
+    .pais-card li {
+        font-size: 0.92rem;
+        word-break: break-word;
+    }
+
+    .error {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.88rem;
+    }
+
+    .bandera {
+        width: 80px;
+    }
+
+    .pais-card h2 {
+        font-size: 1.05rem;
+    }
+
+    .pais-card li {
+        font-size: 0.88rem;
+    }
+}
